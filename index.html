@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>music player</title>
+   <link rel="stylesheet" href="./styles/style.css">
+   <script defer src="./script.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <header></header>
+   <main>
+      <div class="details">
+         <div class="cover-photo"><img src="./music+note+sound+icon-1320183235697157602_0.svg" alt="music icon-1320183235697157602_0"></div>
+         <div class="volume-ctr">
+            <div class="percent">90</div>
+            <div class="sound-icon"><i class="fas fa-volume-up"></i></div>
+            <input type="range" id="volume" min="0" max="100">
+         </div>
+      </div>
+      <div class="actions">
+         <h1>song name</h1>
+         <audio src="./songs/美波「カワキヲアメク」.mp3"></audio>
+         <div class="basic-actions">
+            <div class="backward"><i class="fas fa-step-backward"></i></div>
+            <div class="pause"><i class="fas fa-play"></i></div>
+            <div class="forward"><i class="fas fa-step-forward"></i></div>
+         </div>
+         <div class="progress-bar">
+            <input type="range" id="progress">
+         </div>
+      </div>
+   </main>
+</body>
+</html>
