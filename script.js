@@ -5,7 +5,7 @@ const music = document.querySelector('audio');
 const action = document.querySelector('.basic-actions');
 
 updateVolume();
-sound.onclick = (() => {
+sound.onclick = (() => { // just learned closure
    let cond = true, previousVolume = 0;
    return function() {
       if (cond) {
@@ -32,8 +32,7 @@ vol.onmousemove = () => {
 
 action.onclick = (e => {
    let cond1 = false;
-   function() {
-
+   return function(e) { // forgot to pass it
       if (e.target.className == "pause") {
          if (cond1) {
             music.pause();
@@ -49,9 +48,7 @@ action.onclick = (e => {
    }
 })()
 
-   function updateVolume() {
-      music.volume = (vol.value / 100);
-   }
-      volumePercent.textContent = vol.value;
-      
-   }
+function updateVolume() {
+   music.volume = (vol.value / 100);
+   volumePercent.textContent = vol.value;   
+}
